@@ -14,3 +14,4 @@
   - 对于`\paragraph{}`，使用\thesubsubsection命令获取上一级的编号，并手动输入下一级编号，如`\paragraph{\thesubsubsection.1 标题}`
   - 对于`\subparagraph{}`，使用\thesubsubsection命令获取上一级的编号，并手动输入下两级编号，如`\subparagraph{\thesubsubsection.1.1 标题}`
 - 编译顺序：xeTex -> BibTex -> xeTex -> xeTex -> pdf
+- 代码环境默认高亮，常用语言中除了JavaScript以外都支持，全部语言请看官方文档
