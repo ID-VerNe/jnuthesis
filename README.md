@@ -2,7 +2,7 @@
 
 本仓库为本人毕业设计的备份。仓库中包含：
 
-- 论文
+- [论文](https://github.com/ID-VerNe/jnuthesis/tree/main/paper)
 - 答辩beamer
 
 同时也提供了暨南大学本科生毕业论文的LaTeX模板与用于暨南大学日常演示的beamer模板。
