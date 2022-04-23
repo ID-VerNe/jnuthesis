@@ -15,6 +15,7 @@
   - 对于`\subparagraph{}`，使用\thesubsubsection命令获取上一级的编号，并手动输入下两级编号，如`\subparagraph{\thesubsubsection.1.1 标题}`
 - 编译顺序：xeTex -> BibTex -> xeTex -> xeTex -> pdf
 - 代码环境默认高亮，常用语言中除了JavaScript以外都支持，全部语言请看官方文档
+- [`chapter`文件夹](https://github.com/ID-VerNe/jnuthesis/tree/main/paper/chapter)中存放的是诚信说明和中英文摘要的章节
 
 ## BibTex样式说明：
 
