@@ -10,3 +10,5 @@
 LaTeX模板由黄亚铭师兄的模板修改而来，其[项目地址](https://github.com/yumminhuang/JNUThesis)如下：https://github.com/yumminhuang/JNUThesis
 
 模板基本实现2022年本科生毕业论文模板中的所有要求。
+
+https://www.zhihu.com/equation?tex=\frac{1}{2}
