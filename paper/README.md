@@ -40,7 +40,7 @@
   
     ```latex
     @otherarticalGOVDOC{电力并网运行管理规定,
-	    title={电力并网运行管理规定},
+    	title={电力并网运行管理规定},
     	author={国家能源局},
     	year={2021-12-21}
      }
