@@ -19,7 +19,7 @@
 
 ## BibTex样式说明：
 
-除了官方支持的样式之外，本页[bst](https://github.com/ID-VerNe/jnuthesis/blob/main/paper/gbt7714-numerical.bst)文件中还加入了其他支持
+除了原本支持的样式之外，本页[bst](https://github.com/ID-VerNe/jnuthesis/blob/main/paper/gbt7714-numerical.bst)文件中还加入了其他自定义样式的支持
 
 - 标准[S]：
   - 引用方式：`otherarticalStandard`
