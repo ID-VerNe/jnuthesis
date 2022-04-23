@@ -6,7 +6,7 @@
 
 
 
-## 模板使用须知：
+## 模板使用说明：
 
 - 参考文献使用`\upcite{}`代替`\cite{}`
 - 文章从`\section{}`开始，可自动编号的共有3级，即`\section{}`,`\subsection{}`,`\subsubsection{}`，若需要第四、五级，可以使用`\paragraph{}`和`\subparagraph{}`
@@ -16,7 +16,7 @@
 - 编译顺序：xeTex -> BibTex -> xeTex -> xeTex -> pdf
 - 代码环境默认高亮，常用语言中除了JavaScript以外都支持，全部语言请看官方文档
 
-## BibTex样式：
+## BibTex样式说明：
 
 除了官方支持的样式之外，本页[bst](https://github.com/ID-VerNe/jnuthesis/blob/main/paper/gbt7714-numerical.bst)文件中还加入了其他支持
 
