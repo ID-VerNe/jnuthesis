@@ -1661,6 +1661,22 @@ FUNCTION {techreport}
   misc
 }
 
+FUNCTION {otherarticalEasy}
+{ 
+  output.bibitem
+  output.translation
+  new.block
+  title.in.journal
+    { format.title "title" output.check
+      new.block
+    }
+    'skip$
+  if$
+  new.block
+  fin.entry
+}
+
+
 FUNCTION {otherarticalStandard}
 { 
   output.bibitem
