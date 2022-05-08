@@ -42,7 +42,7 @@
 %页眉，页脚
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\zihao{-5} 暨南大学本科课程论文}
+\fancyhead[C]{\zihao{-5} 暨南大学本科毕业设计（论文）}
 
 
 \CTEXsetup[name={,},number={\arabic{section}},format={\zihao{-2}\bf},nameformat={\songti\zihao{-2}\bf},aftername={\ }]{section}
@@ -73,8 +73,8 @@ format={\zihao{4}\bf},nameformat={\songti\zihao{4}\bf},aftername={\ }]{subparagr
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black}
-
-\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\newcommand{\upcite}[1]{{\textsuperscript{\cite{#1}}}}
+%\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 \usepackage{subfigure}
 %不需要使用gbt7714，已将gbt7714放入根目录
 %\usepackage{gbt7714}
@@ -136,6 +136,7 @@ format={\zihao{4}\bf},nameformat={\songti\zihao{4}\bf},aftername={\ }]{subparagr
   %%--------------- 前言 ----------------- %%
     \include{chapter/declaration}
     \include{chapter/abstract}
+    \zihao{4}
     \tableofcontents
  \thispagestyle{empty}
  \newpage
@@ -145,7 +146,7 @@ format={\zihao{4}\bf},nameformat={\songti\zihao{4}\bf},aftername={\ }]{subparagr
 %重设页眉，页脚
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\zihao{-5} 电力系统网源协调控制系统开发}
+\fancyhead[C]{\zihao{-5} 电厂辅助服务分析支撑演示平台开发}
 \fancyfoot[R]{\thepage}
 %重设页码
 \setcounter{page}{1}
@@ -220,7 +221,7 @@ format={\zihao{4}\bf},nameformat={\songti\zihao{4}\bf},aftername={\ }]{subparagr
 \subsection{平台功能}
 \subsubsection{概述}
 
-网源协调控制系统平台可以采集场站上传的信息，如电力系统频率，机组有功功率，机组预测功率等。平台对所采集的信息根据特定算法进行计算，并对其结果进行展示，给予调度员数据参考。
+电厂辅助服务分析支撑演示平台可以采集场站上传的信息，如电力系统频率，机组有功功率，机组预测功率等。平台对所采集的信息根据特定算法进行计算，并对其结果进行展示，给予调度员数据参考。
 
 平台可以划分为两个主要部分，一是数据平台，二是考核评估平台。其中，数据平台主要收集场站上传的实测数据，包括机组实时数据、机组96点功率数据、系统频率数据等；考核评估平台主要实现详细考核数据的呈现，至今系统Demo中已实现了一次调频考核和风光预测考核两种。
 
@@ -1135,7 +1136,7 @@ jQuery是一个JavaScript库，其极大地简化了JavaScript的编程。在HTM
 
 最后综合上述两步，若一二步中有一步或以上不合格，则记为不合格，反之该次一次调频考核记为合格。
 \paragraph{\thesubsubsection.4 计算时间段内的合格率}\ \\
-一次调频合格率考核时间间隔为一分钟一次。若取时间段为一日，由式\ref{yctphgl}可得：
+一次调频合格率考核时间间隔为一分钟一次。若取时间段为一日，由\ref{yctphgl}可得：
 \begin{equation}\label{key}
 	R_{qualifide}=\frac{T_{up\ to\ standard}}{1440}\times 100\%
 \end{equation}
@@ -1144,7 +1145,7 @@ jQuery是一个JavaScript库，其极大地简化了JavaScript的编程。在HTM
 
 
 \subsubsection{一次调频投入率}
-一次调频投入率考核考核为一个月一次，根据式\ref{yctptrl}即可计算出一次调频投入率。
+一次调频投入率考核考核为一个月一次，根据\ref{yctptrl}即可计算出一次调频投入率。
 
 \subsection{算法的PHP实现}
 \subsubsection{第一步}
@@ -1306,7 +1307,7 @@ jQuery是一个JavaScript库，其极大地简化了JavaScript的编程。在HTM
 
 \subsection{算法的PHP实现}
 
-风光预测二者的算法差别仅在合格基准线，因此将二者放在同一模块中进行计算，仅需传入不同的参数即可。根据式\ref{pre_wind_day}和式\ref{pre_wind_rt}，风光预测的核心计算公式封装代码见\textit{附录B-风光预测考核-预测考核公式}。
+风光预测二者的算法差别仅在合格基准线，因此将二者放在同一模块中进行计算，仅需传入不同的参数即可。根据\ref{pre_wind_day}和\ref{pre_wind_rt}，风光预测的核心计算公式封装代码见\textit{附录B-风光预测考核-预测考核公式}。
 
 函数传入参数中，real为实际功率数据，pred为预测功率数据，base为考核准确率合格线，cap为机组装机容量，mode为模式选择，分为日考核（day）和实施考核（rt）。返回值中，预测准确率和考核时长均保留4位小数。
 
@@ -1862,8 +1863,10 @@ http://49.235.252.236:5000/content/Support/upload\_file.php
 \end{lstlisting}
 
 %%----------------- 参考文献 ----------------- %%
-\addcontentsline{toc}{section}{\hspace{-1em}参考文献}
+\newpage
+
 
     \bibliographystyle{gbt7714-numerical}
+    \addcontentsline{toc}{section}{\hspace{-1em}参考文献}
     \bibliography{reference}
 \end{document}
